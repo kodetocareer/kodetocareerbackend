@@ -23,9 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q6n26th6r&(2n*b%1**n)7#$@ddy#fuxm9s1#kr0dm*ea!j*$2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = [
+    "kodetocareer.com",
+    "www.kodetocareer.com",
+    "kodetocareer.in",
+    "www.kodetocareer.in",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
@@ -175,12 +183,28 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ],
 }
-CORS_ALLOW_ALL_ORIGINS = True
-# CORS settings
+
+CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
+    "https://kodetocareer.com",
+    "https://www.kodetocareer.com",
+    "https://kodetocareer.in",
+    "https://www.kodetocareer.in",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    'http://localhost:5173',
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+# CSRF trusted domains (important for forms, login, payments)
+CSRF_TRUSTED_ORIGINS = [
+    "https://kodetocareer.com",
+    "https://www.kodetocareer.com",
+    "https://kodetocareer.in",
+    "https://www.kodetocareer.in",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
 
