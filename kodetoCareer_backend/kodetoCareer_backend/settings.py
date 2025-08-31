@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     "www.kodetocareer.in",
     "localhost",
     "127.0.0.1",
+    "kodetocareerbackend.onrender.com",
 ]
 
 
